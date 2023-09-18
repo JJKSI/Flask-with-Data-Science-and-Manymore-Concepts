@@ -1,0 +1,50 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <div class="row g-4">
+        <h2>Here we are using a inbuilt dataset of diabetes which comes under sklearn.dataset</h2>
+    </div>
+    <div align="center">
+        <img src='/static/img/linearregressionimg.webp' align="center" width="50%">
+    </div>
+
+    <div>
+        <form method="POST" action="{{url_for('linearregression')}}" enctype="multipart/form-data">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"> Amount of Data you want to test</label>
+            <input type="integer" name='data' class="form-control" id="inputEmail3">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="row g-4">
+
+        <h3>The features of in built dataset(diabetes)</h3>
+        <p>{{head}}</p>
+    </div>
+    <div class="row g-4">
+
+        <h3>The Mean square error:</h3>
+        MSE is a useful metric for comparing different regression models, as it penalizes large errors more heavily than small ones. A lower MSE indicates that the model is better at making predictions. However, one downside to MSE is that it is measured in the
+        square of the units of the target variable, which may not be intuitive to interpret.
+        <p>
+            <h4>{% if mse %}{{ mse }}{% endif %}</h4>
+        </p>
+    </div>
+    <div class="row g-4">
+
+        <h3>The R square error:</h3>
+        The R2 value ranges from 0 to 1, with higher values indicating that more variance is explained by the model. In the case of linear regression, R-squared tells us how well the linear model fits the data. An R-squared value of 1 indicates that the linear
+        regression model perfectly fits the data, while a value of 0 indicates that the model does not fit the data at all.
+        <p>
+            <h4>{{ r2 }}</h4>
+        </p>
+    </div>
+    <div class="row g-4">
+
+        <img src="data:image/png;base64,{{ img }}" ,width="500" height="500">
+    </div>
+
+
+
+
+
+
+</div>{% endblock %}

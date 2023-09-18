@@ -1,0 +1,107 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content" style="background-color: black; color: rgb(118, 33, 214); ">
+    <h2 style="color:rgb(194, 29, 29);">
+        <U>What is Opencv?</U>
+    </h2>
+    <h5 style="background-color: black; color: rgb(58, 34, 192); ">OpenCV is a huge open-source library for computer vision, machine learning, and image processing. OpenCV supports a wide variety of programming languages like Python, C++, Java, etc. It can process images and videos to identify objects, faces, or
+        even the handwriting of a human. When it is integrated with various libraries, such as Numpy which is a highly optimized library for numerical operations, then the number of weapons increases in your Arsenal i.e whatever operations one can do
+        in Numpy can be combined with OpenCV. This OpenCV tutorial will help you learn the Image-processing from Basics to Advance, like operations on Images, Videos using a huge set of Opencv-programs and projects.
+    </h5>
+    <hr>
+    <hr>
+    <br>
+    <h2 style="color:white;">You can Try on different goggle below:</h2>
+    <div align="center">
+
+
+        <form method="POST" action="{{url_for('sunglasses')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">CV</button>
+            <BR>
+
+
+        </form>
+
+
+        <img src="{{ url_for('static', filename='img/glass4.png') }}" height="240px" width="300px" class="image" style="background-color: white;" />
+
+    </div>
+
+    <hr>
+
+    <BR>
+    <div ALIGN="center">
+
+        <form method="POST" action="{{url_for('sunglasses4')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">CV</button>
+            <BR>
+
+
+        </form>
+        <img src="{{ url_for('static', filename='img/glass9.png') }}" height="240px" width="300px" class="image" />
+
+
+    </div>
+    <hr>
+    <BR>
+    <div ALIGN="center">
+        <form method="POST" action="{{url_for('sunglasses3')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">CV</button>
+            <BR>
+
+
+        </form>
+        <img src="{{ url_for('static', filename='img/glass8.png') }}" height="240px" width="300px" class="image" style="background-color: white;" />
+
+
+    </div>
+    <br>
+    <hr>
+    <div align="center">
+        <form method="POST" action="{{url_for('sunglasses2')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">CV</button>
+            <BR>
+
+
+        </form>
+        <img src="{{ url_for('static', filename='img/glass5.png') }}" height="240px" width="300px" class="image" />
+
+
+    </div>
+    <br>
+    <hr>
+
+    <div align="center">
+        <form method="POST" action="{{url_for('sunglasses10')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">CV</button>
+            <BR>
+
+
+        </form>
+        <img src="{{ url_for('static', filename='img/glass10.png') }}" height="240px" width="300px" alt="sunglasses image" class="image" />
+
+
+    </div>
+    <BR>
+    <hr>
+
+    <div ALIGN="center">
+
+        <form method="POST" action="{{url_for('sunglasses20')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">CV</button>
+            <BR>
+
+
+        </form>
+        <img src="{{ url_for('static', filename='img/glass20.png') }}" height="240px" width="300px" class="image">
+
+
+    </div>
+    <BR>
+</div>
+{% endblock %}

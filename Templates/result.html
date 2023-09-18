@@ -1,0 +1,31 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="conetnt">
+
+    <h1 align="center">output</h1>
+
+    <div align="center">
+        Acuuracy of the model; {% if msg %} {{msg}} {% endif %}
+    </div>
+
+    <div align="center">
+        f1 SCORE of the model; {% if msg2 %} {{msg2}} {% endif %}
+    </div>
+    <br>
+    <div align="center">
+        Confusion Matrix:
+        <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+        <img src="data:image/png;base64,{{ img_data }}">
+    </div>
+    <br>
+    <div align="center">
+        ROC curve Matrix:
+        <img src="data:image/png;base64,{{ img1 }}">
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

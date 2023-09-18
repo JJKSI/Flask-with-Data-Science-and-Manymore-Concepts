@@ -1,0 +1,23 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <h3>Seaborn library</h3>
+    <DIV>Seaborn is a library for making statistical graphics in Python. It builds on top of matplotlib and integrates closely with pandas data structures. Seaborn helps you explore and understand your data.</DIV>
+    <div>
+        <h4>SO try the iris dataset's Visualization USING SEABORN LIBRARY.</h4>
+    </div>
+    <div align="center">
+
+
+        <form method="POST" action="{{url_for('fill')}}" enctype="multipart/form-data">
+            <label for="formFile" class="form-label">Select a file</label>
+            <input class="form-control" name='file' type="file" id="formFile">
+
+            <button type="submit" class="btn btn-primary">click</button>
+
+
+
+
+
+        </form>
+    </div>
+</div>{% endblock %}

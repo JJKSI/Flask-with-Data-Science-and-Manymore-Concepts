@@ -1,0 +1,71 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <h3>Understanding Hierarchical Clustering</h3>
+    <DIV>When the Hierarchical Clustering Algorithm (HCA) starts to link the points and find clusters, it can first split points into 2 large groups, and then split each of those two groups into smaller 2 groups, having 4 groups in total, which is the divisive
+        and top-down approach. Alternatively, it can do the opposite - it can look at all the data points, find 2 points that are closer to each other, link them, and then find other points that are the closest ones to those linked points and keep building
+        the 2 groups from the bottom-up. Which is the agglomerative approach we will develop.
+    </DIV>
+    <div align="center">
+        <img src='/static/img/heiarchicalimg.png' align="center" width="50%">
+    </div>
+    <div>
+        <form method="POST" action="{{url_for('heiarchical')}}" enctype="multipart/form-data">
+
+            <label for="formFile" class="form-label">Select a file</label>
+            <input class="form-control" name='file' type="file" id="formFile">
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+
+    </div>
+    <DIV>
+        <h5>Simple method</h5>
+        Here the first cluster is just formed by cleaning the data and directly plotting a scatter plot.
+    </DIV>
+    <div align="center">
+        The clusters:
+        <img src="data:image/png;base64,{{ scatter1 }}">
+    </div>
+    <br>
+    <div>
+        <h5>PCA(PRINCIPAL COMPONENT ANALYSIS)</h5>
+        PCA will reduce the dimensions of our data while trying to preserve as much of its information as possible.For each pair of features, PCA sees if the greater values of one variable correspond with the greater values of the other variable, and it does
+        the same for the lesser values. So, it essentially computes how much the feature values vary towards one another - we call that their covariance. Those results are then organized into a matrix, obtaining a covariance matrix.After getting the covariance
+        matrix, PCA tries to find a linear combination of features that best explains it - it fits linear models until it identifies the one that explains the maximum amount of variance.With the best line (linear combination) found, PCA gets the directions
+        of its axes, called eigenvectors, and its linear coefficients, the eigenvalues. The combination of the eigenvectors and eigenvalues - or axes directions and coefficients - are the Principal Components of PCA. And that is when we can choose our
+        number of dimensions based on the explained variance of each feature, by understanding which principal components we want to keep or discard based on how much variance they explain. After obtaining the principal components, PCA uses the eigenvectors
+        to form a vector of features that reorient the data from the original axes to the ones represented by the principal components - that's how the data dimensions are reduced.
+
+    </div>
+    <div align="center">
+        Clusters formed after performing pca:
+        <img src="data:image/png;base64,{{ pcascatter1 }}">
+    </div>
+    <br>
+    <br>
+    <div>
+        <h5>The dendrogram</h5>
+        The dendrogram is a result of the linking of points in a dataset. It is a visual representation of the hierarchical clustering process.
+    </div>
+
+    <div align="center">
+
+        dendrogram:
+        <img src="data:image/png;base64,{{ dendrogram }}">
+    </div>
+    <br>
+    <br>
+    <h5>For the below diagrams: </h5>
+    <div>
+        > (label: 0, purple data points) belong to the customers with high salaries but low spending. <br> (label: 1, blue data points) are the ones with average income and average spending. <br>>(label: 2, green data points), are the customers with high
+        salaries and high spending.<br> >(label: 3, orange data points) are the ones with high income and low spending, <br> >(label: 4, red) are the customers that have low salaries and low spending,
+    </div>
+    <div align="center">
+        final data clusters:
+        <img src="data:image/png;base64,{{ opscatter1 }}">
+    </div>
+    <div align="center">
+        final pca clusters:
+        <img src="data:image/png;base64,{{ oppscatter2 }}">
+    </div>
+
+</div>{% endblock %}

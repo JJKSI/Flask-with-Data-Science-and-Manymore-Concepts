@@ -1,0 +1,90 @@
+{% extends "admin_layout.html" %} {% block content %}
+
+<div class="content">
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-10">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <h6 class="mb-0">WHAT IS SEABORN?</h6>
+                    <p class="mb-2">Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. For a brief introduction to the ideas behind the library, you can read
+                        the introductory notes or the paper.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div align="center">
+        <img src='/static/img/seabornimg.webp' align="center" width="50%">
+    </div>
+    <h1>Enter following details for normal distribution:</h1>
+    <form class="forms-sample" method="post" action="{{url_for('normaldistri')}}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="n">enter array size</label>
+            <input type="number" class="form-control" name="n" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <div class="form-group">
+            <label for="y">do u want visulization in hist form</label>
+            <input type="number" class="form-control" name="y" ,id="exampleInputName1" placeholder="if yes then press 1 ">
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">sumbit</button>
+    </form>
+    <div align="center">
+        output:
+
+        <img src="data:image/png;base64,{{ img4 }}">
+    </div>
+
+    <h1 class="card-title"> Enter following details for visulaization of binomial distribution </h1>
+    <form class="forms-sample" method="post" action="{{url_for('binomial')}}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="p">enter array size</label>
+            <input type="number" class="form-control" name="p" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <div class="form-group">
+            <label for="q">enter no of bins</label>
+            <input type="number" class="form-control" name="q" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <div class="form-group">
+            <label for="r">enter width b/w size</label>
+            <input type="text" class="form-control" name="r" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">sumbit</button>
+    </form>
+
+
+    <div align="center">
+        output:
+
+        <img src="data:image/png;base64,{{ img5 }}">
+    </div>
+    <h1 class="card-title"> Enter following details for comparsion of visulaization </h1>
+    <form class="forms-sample" method="post" action="{{url_for('Comp')}}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="z">enter array size</label>
+            <input type="number" class="form-control" name="z" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <div class="form-group">
+            <label for="q">enter lam</label>
+            <input type="number" class="form-control" name="q" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <div class="form-group">
+            <label for="c">enter no of bins</label>
+            <input type="number" class="form-control" name="c" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+        <div class="form-group">
+            <label for="r">enter width b/w bins</label>
+            <input type="text" class="form-control" name="r" ,id="exampleInputName1" placeholder="enter values ">
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-2">sumbit</button>
+    </form>
+
+    <div align="center">
+        output:
+
+        <img src="data:image/png;base64,{{ img8 }}">
+    </div>
+
+</div>
+{% endblock %}

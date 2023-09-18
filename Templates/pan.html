@@ -1,0 +1,32 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <H3>
+        <U>What is pandas?</U>
+    </H3>
+    Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.
+
+    <img src='/static/img/pandasimg2.webp' align="center" width="50%">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <form method="POST" action="{{url_for('pdfill')}}" enctype="multipart/form-data">
+            <label for="formFile" class="form-label">Select a file</label>
+            <input class="form-control" name='file' type="file" id="formFile">
+
+            <button type="submit" class="btn btn-primary">click</button>
+
+
+
+
+
+        </form>
+    </div>
+
+
+
+</div>
+
+{% endblock %}

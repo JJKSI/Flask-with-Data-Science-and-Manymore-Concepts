@@ -1,0 +1,27 @@
+{% extends "admin_layout.html" %} {% block content %}
+
+
+<br>
+<div align="center">
+    <b>The Bar Chart is:</b>
+    <img src="data:image/png;base64,{{ bar }} " width="500" height="500">
+</div>
+<br>
+<hr>
+<div align="center">
+    <b>The Line chart is:</b>
+    <img src="data:image/png;base64,{{ line }} " width="500" height="500">
+</div>
+<br>
+<hr>
+<div align="center">
+    <b>The Scatter Plot is is:</b>
+    <img src="data:image/png;base64,{{ scatter }} " width="500" height="500">
+</div>
+<!-- <div align="center">
+    Your graph is:
+    <img src="data:image/png;base64,{{ areaplot }} " width="500" height="500">
+</div> -->
+
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class='content'>
+    <h3>Your score:</h3>
+    <h1>{{ score }} </h1>
+    <a href="{{ url_for('quiz') }}">Try Again</a>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <div class="container-fluid pt-4 px-4" align="center">
+        <div class="row g-4">
+
+            <h3>The head function of Pandas</h3>
+            {{x|safe}}
+        </div>
+        <div class="row g-4">
+
+            <h3>The tail function of Pandas</h3>
+            {{y|safe}}
+        </div>
+        <div class="row g-4">
+
+            <h3>Checking null values in each row</h3>
+            {{z|safe}}
+        </div>
+        <div class="row g-4">
+
+            <h3>Statistics descrpition</h3>
+            {{a|safe}}
+        </div>
+        <div class="row g-4">
+
+            <h3>Information of the dataset type</h3>
+            {{b|safe}}
+        </div>
+        <!-- <form method="POST" action="{{url_for('pdfill')}}" enctype="multipart/form-data">    
+            enter the column you want to delete:<input type="text" name="y"> enter the column you want to delete:<input type="text" name="z">
+        </form>
+        <div class="row g-4">
+
+            <h3>Information of the dataset type</h3>
+            {{xx|safe}}
+        </div> -->
+    </div>
+    <form method="POST" action="{{url_for('pdfill')}}" enctype="multipart/form-data">
+        <label for="formFile" class="form-label">Select a file</label>
+        <input class="form-control" name='file' type="file" id="formFile"> enter the column you want to delete:<input type="text" name="col">
+        <button type="submit" class="btn btn-primary">newdataset</button>
+        <div class="row g-4">
+
+            <h3>After deletion of that column</h3>
+            {{x|safe}}
+        </div>
+
+
+
+    </form>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <div><img src='/static/img/chatbotimg.webp' align="center" width="50%">
+
+    </div>
+    <h1 align="center">Ask a question:</h1>
+    <form action="{{ url_for('chatbotfun')}}" method="POST" align="center" enctype="multipart/form-data">
+        <input type="text" name="user_input" size="60%">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <br>
+    <div style="color: rgb(56, 56, 107); size: 10px;">
+        <HR>
+        <h2><u>IMPORTANT QUESTION YOU CAN ASK TO THE CHATBOT</u></h2>
+        1)what is the trade-off between bias and variance <br>2)What is the difference between supervised and unsupervised machine learning<br> 3)How is KNN different from k-means clustering<br>4)Explain how a ROC curve works<br>5)Explain the difference
+        between L1 and L2 regularization<br>6)difference between deep and machine learning<br>7)Which is more important to you: model accuracy or model performance<br>8)Wha tis the F1 score<br>9)When should you use classification over regression<br>10)How
+        do you handle missing or corrupted data in a dataset<br>11)What are dimensionality reduction and its benefits<br>12)What is a Confusion Matrix<br>
+        <br>
+        <hr>
+        <h2>NOW FEW QUESTIONS RELATED TO COMPUTER VISION
+            <BR>
+            <hr>
+        </h2>13)How to read an image in OpenCV<br>14)How can you resize an image in OpenCV<br>15)What are the different flags in OpenCV imread function<br>16)What is the VideoCapture operation in OpenCV<br>17)What is Cascade Classifier in OpenCV
+
+    </div>
+</div>
+{% endblock %}

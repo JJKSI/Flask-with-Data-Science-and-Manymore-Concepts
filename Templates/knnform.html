@@ -1,0 +1,35 @@
+{% extends "admin_layout.html" %} {% block content %} {% if msg %} {{ msg }} {% endif %}
+<div class='content'>
+    <div class="row g-8">
+
+        <div class="col-sm-20 col-xl-20">
+            <div class="bg-light text-center rounded p-4">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div style="background-color: black; color: rgb(52, 169, 199); ">
+                        <h3 class="mb-0 " style="color:white;">KNN Algorithm</h3>
+                        <h6 style="color: rgb(52, 169, 199);">K-Nearest Neighbour is one of the simplest Machine Learning algorithms based on Supervised Learning technique. K-NN algorithm assumes the similarity between the new case/data and available cases and put the new case into the category
+                            that is most similar to the available categories. K-NN algorithm stores all the available data and classifies a new data point based on the similarity. This means when new data appears then it can be easily classified into
+                            a well suite category by using K- NN algorithm. K-NN algorithm can be used for Regression as well as for Classification but mostly it is used for the Classification problems. K-NN is a non-parametric algorithm, which means
+                            it does not make any assumption on underlying data. It is also called a lazy learner algorithm because it does not learn from the training set immediately instead it stores the dataset and at the time of classification, it
+                            performs an action on the dataset.
+                        </h6>
+                        <img src='/static/img/knnimg2.webp' align="flex" width="50%">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <form method="POST" action="{{ url_for('knn') }}" enctype="multipart/form-data">
+        <label for="formFile">Select a file:</label>
+        <input class="form-control" name='file' type="file" id="formFile">
+        <label for="data">Amount of data to test:</label>
+        <input type="integer" name='data' class="form-control" id="data">
+        <label for="vv">Value of K:</label>
+        <input type="integer" name="vv" class="form-control" id="vv">
+        <label for="target">Target Column (index starting from 0):</label>
+        <input type="integer" name="target" class="form-control" id="target">
+        <button type="submit" class="btn btn-primary">Check accuracy</button>
+    </form>
+</div>
+{% endblock %}

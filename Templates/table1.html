@@ -1,0 +1,34 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <div class="container-fluid pt-4 px-4" align="center">
+        <div class="row g-4" align="center">
+
+            <h3>The dataset </h3>
+            {{x|safe}}
+        </div>
+    </div>
+    <div class="container-fluid pt-4 px-4" align="center">
+        <div class="row g-4">
+
+            <form method="POST" action="{{url_for('graph')}}" enctype="multipart/form-data">
+
+                <label for="formFile" class="form-label">Select a file</label>
+                <input class="form-control" name='file' type="file" id="formFile">
+
+
+
+                <label for="inputPassword3" class="col-sm-2 col-form-label">enter column name</label>
+                <input type="text" name="vv" class="form-control" id="inputPassword3">
+
+                <button type="submit" class="btn btn-primary">click</button>
+
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <div class="row g-4">
+        <div class="col-sm-6 col-xl-10">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <h6 class="mb-0">WHAT IS MATPLOTLIB?</h6>
+                    <p class="mb-2">Matplotlib is a low level graph plotting library in python that serves as a visualization utility. Matplotlib was created by John D. Hunter. Matplotlib is open source and we can use it freely. Matplotlib is mostly written in python,
+                        a few segments are written in C, Objective-C and Javascript for Platform compatibility.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div align="center">
+        <img src='/static/img/matplotlibimg2.avif' align="center" width="50%">
+    </div>
+    <h3>simple plotting</h3>
+    <form method="POST" action="/create-plot">
+        <div class="form-group">
+            <label for="pldata1"> data1:</label>
+            <input type="text" id="pldata1" name="pldata1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="pldata2">data 2:</label>
+            <input type="text" id="pldata2" name="pldata2" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ls">line style:</label>
+            <input type="text" id="ls" name="ls" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="lw">line width:</label>
+            <input type="text" id="lw" name="lw" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="marker">marker:</label>
+            <input type="text" id="marker" name="marker" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="color">color:</label>
+            <input type="text" id="color" name="color" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">plot the data</button>
+    </form>
+
+    <h3>scatter plotting</h3>
+    <form method="POST" action="/create-scatterplot">
+        <div class="form-group">
+            <label for="xdata"> x-data:</label>
+            <input type="text" id="xdata" name="xdata" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ydata">y-data:</label>
+            <input type="text" id="ydata" name="ydata" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="colorr">color range:</label>
+            <input type="text" id="colorr" name="colorr" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="cmap">cmap:</label>
+            <input type="text" id="cmap" name="cmap" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="alpha">alpha:</label>
+            <input type="text" id="alpha" name="alpha" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="size">size:</label>
+            <input type="text" id="size" name="size" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">plot the data</button>
+    </form>
+
+    <h3>pie chart</h3>
+    <form method="POST" action="/create-pie">
+        <div class="form-group">
+            <label for="datapi"> data:</label>
+            <input type="text" id="datapi" name="datapi" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="colorpi">color for the pie chart:</label>
+            <input type="text" id="colorpi" name="colorpi" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="labels">labels :</label>
+            <input type="text" id="labels" name="labels" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="explode">explode:</label>
+            <input type="text" id="explode" name="explode" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">plot the data</button>
+    </form>
+
+    <h3>3d surface plot </h3>
+    <form method="POST" action="/create3d">
+        <div class="form-group">
+            <label for="x"> x:</label>
+            <input type="text" id="x" name="x" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="y">y:</label>
+            <input type="text" id="y" name="y" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="z">z:</label>
+            <input type="text" id="z" name="z" class="form-control">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">plot the data</button>
+    </form>
+
+</div>{% endblock %}

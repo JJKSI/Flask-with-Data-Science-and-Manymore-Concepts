@@ -1,0 +1,65 @@
+{% extends "admin_layout.html" %} {% block content %}
+
+
+<div class="content" style="background-color: black; color: rgb(52, 169, 199);">
+    <H3 style="color:rgb(216, 19, 150);">
+        <U>What is NumPy?</U>
+    </H3>
+    NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations
+    on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
+    <div align="center">
+        <img src='/static/img/numpyimg.webp' align="center" width="50%">
+    </div>
+    <h3 align="center"><u style="color:rgb(216, 19, 150);">Create an array</u></h3>
+    <div>
+        <form method="POST" action="{{url_for('createarray')}}">
+            <label>set1</label>
+            <input type="text" name="x">
+            <label>set2</label>
+            <input type="text" name="y">
+
+            <button type="submit">create array</button>
+        </form>
+        <h4 style="color:rgb(216, 19, 150);">Your created array is:</h4>
+        <p>{{ row }}</p>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h3 align="center" style="color:rgb(216, 19, 150);"><u>Sorting the array</u></h3>
+        <form method="POST" action="/sort">
+            <label>Enter the array:</label>
+            <input type="text" name="z">
+            <button type="submit">Sort your array</button>
+        </form>
+        <h4 style="color:rgb(216, 19, 150);">Before Sorting:</h4>
+        <p>{{ sortarray }}</p>
+        <h4 style="color:rgb(216, 19, 150);">Your created array is:</h4>
+        <p>{{ sorted }}</p>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <h3 align="center" style="color:rgb(216, 19, 150);"><u>Slicing the array:</u></h3>
+        <form method="POST" action="/slice">
+            <label>Enter the array:</label>
+            <input type="text" name="z">
+            <br>
+            <label>start:</label>
+            <input type="integer" name='a'>
+            <br>
+            <label>stop(exclude):</label>
+            <input type="integer" name='b'>
+            <br>
+            <label>step:</label>
+            <input type="integer" name="c">
+            <button type="submit">Slice your array</button>
+        </form>
+
+        <h4 style="color:rgb(216, 19, 150);">Your sliced array is:</h4>
+        <p>{{ slice }}</p>
+    </div>
+
+
+</div>
+{% endblock %}

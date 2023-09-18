@@ -1,0 +1,33 @@
+{% extends "admin_layout.html" %} {% block content %} {% if msg %} {{msg}} {% endif %}
+
+
+
+<div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="index.html" class="">
+                        <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>One Piece</h3>
+                    </a>
+                    <h3>ADDITION</h3>
+                </div>
+                <form method="POST" action="{{url_for('addition')}}">
+                    <div class="form-floating mb-3">
+                        <input type="number" name='one' class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">first number</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="number" name='two' class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">second number</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sum</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

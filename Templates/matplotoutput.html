@@ -1,0 +1,14 @@
+{% extends "admin_layout.html" %} {% block content %}
+
+<div class="center">
+
+    <h1 align="center">output</h1>
+
+    <br>
+    <div align="center">
+        plot
+        <!-- <img src="static/img/confusion.png" width="450" height="300"> -->
+        <img src="data:image/png;base64,{{ image }}">
+    </div>
+</div>
+<br> {% endblock %}

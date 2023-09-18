@@ -1,0 +1,12 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class='content'>
+    <h3>Welcome to the quiz:</h3>
+    <h1>{{ question }}</h1>
+    <form action="{{ url_for('quizimp')}}" method="POST">
+        {% for option in options %}
+        <input type="radio" name="answer" value="{{ loop.index }}" id="{{ loop.index }}">
+        <label for="{{ loop.index }}">{{ option }}</label><br> {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

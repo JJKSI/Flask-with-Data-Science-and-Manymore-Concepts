@@ -1,0 +1,33 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content" style="background-color: black; color: rgb(52, 169, 199);">
+    <H4 style="color:white;">VIRTUAL MOUSE CONCEPT</H4>
+
+    <div>
+        Here we are using <b>Mediapipe</b> which offers open source cross-platform, customizable ML solutions for live and streaming media. Android. iOS. Python. <br> Also we have used<b>Pyautogui</b> which is an automation library that allows mouse and
+        keyboard control.
+        <br>Not only that the concepts of landmarks and open computer vision is used.
+        <hr>
+        <br> So by clicking the below button you can:
+        <br>
+        <br>
+        <h5 style="color:rgb(54, 194, 26);">i) Use your hand as a mouse on your PC</h5>
+        <hr>
+        <h5 style="color:rgb(19, 196, 48);">ii)And for performing click user have to touch his thumb with the first Finger.</h5>
+
+
+    </div>
+    <div align="center">
+
+
+        <form method="POST" action="{{url_for('cv')}}" enctype="multipart/form-data">
+            <br>
+            <button type="submit" class="btn btn-primary">USE YOUR HANDS AS AN VIRTUAL MOUSE</button>
+
+
+        </form>
+        <div align="center">
+            <img src='/static/img/cvimg.webp' width="50%">
+        </div>
+    </div>
+</div>
+{% endblock %}

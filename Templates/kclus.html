@@ -1,0 +1,42 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content">
+    <h3>WHAT IS KMEAN CLUSTERING?</h3>
+    <DIV>k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster</DIV>
+    <div align="center">
+        <img src='/static/img/kmeansimg.jfif' align="center" width="50%">
+    </div>
+    <div>
+        <form method="POST" action="{{url_for('kmean')}}" enctype="multipart/form-data">
+
+            <label for="formFile" class="form-label">Select a file</label>
+            <input class="form-control" name='file' type="file" id="formFile">
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+
+    </div>
+    <div>
+        the targets: {{ t }}
+        <p></p>
+    </div>
+
+    <div align="center">
+        For finding the best number of clusters:
+        <img src="data:image/png;base64,{{ lime }}">
+    </div>
+    <div>
+        The predictions made by the kmeans model:
+        <h5> {{ x }}</h5>
+    </div>
+    <div align="center">
+        The clusters:
+        <img src="data:image/png;base64,{{ scatter }}">
+    </div>
+    <div align="center">
+        The amount of datapoints in clusters:
+        <img src="data:image/png;base64,{{ count }}">
+    </div>
+
+
+
+
+</div>{% endblock %}

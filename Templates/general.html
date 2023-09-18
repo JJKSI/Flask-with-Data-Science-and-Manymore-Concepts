@@ -1,0 +1,40 @@
+{% extends "admin_layout.html" %}{% block content %}
+<div class="content">
+    <H3>LETS CHECK WHICH MODEL IS THE BEST:</H3>
+    <div>
+        <form method="POST" action="{{url_for('general')}}" enctype="multipart/form-data">
+
+            <label for="formFile" class="form-label">Select The dataset</label>
+            <input class="form-control" name='file' type="file" id="formFile">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"> Amount of Data you want to test</label>
+            <input type="integer" name='data' class="form-control" id="inputEmail3">
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+        <div class="row g-4">
+
+            <h3>The head function of Pandas</h3>
+            {{head|safe}}
+        </div>
+        <div class="row g-4">
+
+            <h3>After renaming the columns</h3>
+            {{head1|safe}}
+        </div>
+        <div align="center">
+
+            <h3>Statistics descrpition</h3>
+            {{desc|safe}}
+        </div>
+
+        <div align="center">
+
+            <h3>Information of the dataset type</h3>
+            {{null|safe}}
+        </div>
+        <div align="center">
+            <h3> Comparing the accuracy of the models:</h3>
+            <img src="data:image/png;base64,{{ img }}">
+        </div>
+
+    </div>
+</div> {% endblock %}

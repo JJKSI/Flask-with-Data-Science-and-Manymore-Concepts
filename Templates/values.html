@@ -1,0 +1,33 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div class="content" style="background-color: rgb(231, 231, 18);">
+    <h1>
+        <U>What is Matplotlib?</U>
+    </h1>
+    <h3>Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.</h3>
+    <div align="center">
+        <img src='/static/img/matplotlibimg2.jfif' style="background-color: white;" width="40%">
+    </div>
+    <div align="center">
+        <br>
+
+        <hr>
+        <hr>
+
+        <h3> To check Different types of charts </h3>
+        <form method="POST" action="{{url_for('mat')}}" enctype="multipart/form-data">
+
+
+
+            <br>
+            <label for="inputPassword3" class="col-sm-2 col-form-label">enter values for x</label>
+            <input type="text" name="vv" class="form-control" id="inputPassword3">
+
+            <label for="inputPassword3" class="col-sm-2 col-form-label">enter vlaues for y</label>
+            <input type="text" name="xx" class="form-control" id="inputPassword3">
+
+            <button type="submit" class="btn btn-primary">See the graph here</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

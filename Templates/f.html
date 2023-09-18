@@ -1,0 +1,443 @@
+{% extends "admin_layout.html" %} {% block content %} {% if msg %} {{msg}} {% endif %}
+
+<div class="container-xxl position-relative bg-white d-flex p-0">
+
+    <div class="sidebar pe-4 pb-3">
+        <nav class="navbar bg-light navbar-light">
+            <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DATA SCIENCE</h3>
+            </a>
+            <div class="d-flex align-items-center ms-4 mb-4">
+                <div class="position-relative">
+                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                    <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0">Mugiwara</h6>
+                    <span>Admin</span>
+                </div>
+            </div>
+            <div class="navbar-nav w-100">
+                <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Basic Libraries</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="button.html" class="dropdown-item">Numpy</a>
+                        <a href="typography.html" class="dropdown-item">Pandas</a>
+                        <a href="element.html" class="dropdown-item">Matplotlib</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Classification</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="button.html" class="dropdown-item">KNN</a>
+                        <a href="typography.html" class="dropdown-item">Logistic</a>
+                        <a href="element.html" class="dropdown-item">Decision Tree</a>
+                        <a href="button.html" class="dropdown-item">Random Forest</a>
+                        <a href="typography.html" class="dropdown-item">SVM</a>
+
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Clustering</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">K Clustering</a>
+                            <a href="typography.html" class="dropdown-item">Heiarchical based</a>
+
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Try by your self</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a class="dropdown-item">KNN</a>
+                            <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>enter values</a>
+                            <a class="dropdown-item">Logistic</a>
+                            <a href="dt.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>enter values</a>
+                            <a class="dropdown-item">Decision Tree</a>
+                            <a href="dt.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>enter values</a>
+                            <a class="dropdown-item">Random Forest</a>
+                            <a href="formrf.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>enter values</a>
+                            <a class="dropdown-item">SVM</a>
+                            <a href="dt.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>enter values</a>
+                            <a class="dropdown-item">K Clustering</a>
+                            <a class="dropdown-item">Heiarchical based</a>
+
+                        </div>
+
+
+
+                        <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Try yourself</a>
+                        <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                        <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Visualization</a>
+                        <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>For references</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                            <div class="dropdown-menu bg-transparent border-0">
+                                <a href="signin.html" class="dropdown-item">LOG IN</a>
+                                <a href="signup.html" class="dropdown-item">LOG OUT</a>
+                                <a href="404.html" class="dropdown-item">404 Error</a>
+                                <a href="blank.html" class="dropdown-item">Blank Page</a>
+                            </div>
+                        </div>
+                    </div>
+        </nav>
+        </div>
+        <!-- Sidebar Start -->
+
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New user added</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Password changed</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">John Doe</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+
+            <!-- Form Start -->
+            <div class="row g-8">
+
+                <div class="col-sm-20 col-xl-20">
+                    <div class="bg-light text-center rounded p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div style="background-color: black; color: rgb(52, 169, 199); ">
+                                <h3 class="mb-0 " style="color:white;">KNN Algorithm</h3>
+                                <h6 style="color: rgb(52, 169, 199);">K-Nearest Neighbour is one of the simplest Machine Learning algorithms based on Supervised Learning technique. K-NN algorithm assumes the similarity between the new case/data and available cases and put the new case into
+                                    the category that is most similar to the available categories. K-NN algorithm stores all the available data and classifies a new data point based on the similarity. This means when new data appears then it can be easily
+                                    classified into a well suite category by using K- NN algorithm. K-NN algorithm can be used for Regression as well as for Classification but mostly it is used for the Classification problems. K-NN is a non-parametric
+                                    algorithm, which means it does not make any assumption on underlying data. It is also called a lazy learner algorithm because it does not learn from the training set immediately instead it stores the dataset and at
+                                    the time of classification, it performs an action on the dataset.
+                                </h6>
+                                <img src='/static/img/knnimg2.webp' align="flex" width="50%">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid pt-4 px-4 ">
+                <div class="row g-4 ">
+
+                    <div class="col-sm-12 col-xl-6 ">
+                        <div class="bg-light rounded h-100 p-4 ">
+                            <h6 class="mb-4 ">TEST HERE</h6>
+                            <form method="POST " action="{{url_for('knn')}} " enctype="multipart/form-data ">
+                                <div class="bg-light rounded h-100 p-4 ">
+                                    <h6 class="mb-4 ">File Input</h6>
+                                    <div class="mb-3 ">
+                                        <label for="formFile " class="form-label ">Select a file</label>
+                                        <input class="form-control " name='file' type="file " id="formFile ">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 ">
+                                    <label for="inputEmail3 " class="col-sm-2 col-form-label "> Amount of Data you want to test</label>
+                                    <div class="col-sm-10 ">
+                                        <input type="integer " name='data' class="form-control " id="inputEmail3 ">
+                                    </div>
+                                </div>
+                                <div class="row mb-3 ">
+                                    <label for="inputPassword3 " class="col-sm-2 col-form-label ">Value of k</label>
+                                    <div class="col-sm-10 ">
+
+                                        <input type="integer " name="vv " class="form-control " id="inputPassword3 ">
+                                        <input type="integer" name="target">target
+                                    </div>
+                                </div>
+
+
+                                <button type="submit " class="btn btn-primary ">Check accuracy</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <div class="col-sm-12 col-xl-6 ">
+                    <div class="bg-light rounded h-100 p-4 ">
+                        <h6 class="mb-4 ">Floating Label</h6>
+                        <div class="form-floating mb-3 ">
+                            <input type="email " class="form-control " id="floatingInput " placeholder="name@example.com ">
+                            <label for="floatingInput ">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="password " class="form-control " id="floatingPassword " placeholder="Password ">
+                            <label for="floatingPassword ">Password</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <select class="form-select " id="floatingSelect " aria-label="Floating label select example ">
+                                <option selected>Open this select menu</option>
+                                <option value="1 ">One</option>
+                                <option value="2 ">Two</option>
+                                <option value="3 ">Three</option>
+                            </select>
+                            <label for="floatingSelect ">Works with selects</label>
+                        </div>
+                        <div class="form-floating ">
+                            <textarea class="form-control " placeholder="Leave a comment here " id="floatingTextarea " style="height: 150px; "></textarea>
+                            <label for="floatingTextarea ">Comments</label>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- <div class="col-sm-12 col-xl-6 ">
+                    <div class="bg-light rounded h-100 p-4 ">
+                        <h6 class="mb-4 ">File Input</h6>
+                        <div class="mb-3 ">
+                            <label for="formFile " class="form-label ">Default file input example</label>
+                            <input class="form-control " type="file " id="formFile ">
+                        </div>
+                        <div class="mb-3 ">
+                            <label for="formFileMultiple " class="form-label ">Multiple files input example</label>
+                            <input class="form-control " type="file " id="formFileMultiple " multiple>
+                        </div>
+                        <div class="mb-3 ">
+                            <label for="formFileSm " class="form-label ">Small file input example</label>
+                            <input class="form-control form-control-sm " id="formFileSm " type="file ">
+                        </div>
+                        <div>
+                            <label for="formFileLg " class="form-label ">Large file input example</label>
+                            <input class="form-control form-control-lg " id="formFileLg " type="file ">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xl-6 ">
+                    <div class="bg-light rounded h-100 p-4 ">
+                        <h6 class="mb-4 ">Select</h6>
+                        <select class="form-select form-select-sm mb-3 " aria-label=".form-select-sm example ">
+                            <option selected>Open this select menu</option>
+                            <option value="1 ">One</option>
+                            <option value="2 ">Two</option>
+                            <option value="3 ">Three</option>
+                        </select>
+                        <select class="form-select mb-3 " aria-label="Default select example ">
+                            <option selected>Open this select menu</option>
+                            <option value="1 ">One</option>
+                            <option value="2 ">Two</option>
+                            <option value="3 ">Three</option>
+                        </select>
+                        <select class="form-select form-select-lg mb-3 " aria-label=".form-select-lg example ">
+                            <option selected>Open this select menu</option>
+                            <option value="1 ">One</option>
+                            <option value="2 ">Two</option>
+                            <option value="3 ">Three</option>
+                        </select>
+                        <select class="form-select " multiple aria-label="multiple select example ">
+                            <option selected>Open this select menu</option>
+                            <option value="1 ">One</option>
+                            <option value="2 ">Two</option>
+                            <option value="3 ">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xl-6 ">
+                    <div class="bg-light rounded h-100 p-4 ">
+                        <h6 class="mb-4 ">Check, Radio & Switch</h6>
+                        <div class="form-check ">
+                            <input class="form-check-input " type="checkbox " value=" " id="flexCheckDefault ">
+                            <label class="form-check-label " for="flexCheckDefault ">
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input " type="checkbox " value=" " id="flexCheckChecked " checked>
+                            <label class="form-check-label " for="flexCheckChecked ">
+                                Checked checkbox
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input " type="checkbox " id="inlineCheckbox1 " value="option1 ">
+                            <label class="form-check-label " for="inlineCheckbox1 ">1</label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input " type="checkbox " id="inlineCheckbox2 " value="option2 ">
+                            <label class="form-check-label " for="inlineCheckbox2 ">2</label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input " type="checkbox " id="inlineCheckbox3 " value="option3 " disabled>
+                            <label class="form-check-label " for="inlineCheckbox3 ">3 (disabled)</label>
+                        </div>
+                        <hr>
+                        <div class="form-check ">
+                            <input class="form-check-input " type="radio " name="flexRadioDefault " id="flexRadioDefault1 ">
+                            <label class="form-check-label " for="flexRadioDefault1 ">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input " type="radio " name="flexRadioDefault " id="flexRadioDefault2 " checked>
+                            <label class="form-check-label " for="flexRadioDefault2 ">
+                                Default checked radio
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input " type="radio " name="inlineRadioOptions " id="inlineRadio1 " value="option1 ">
+                            <label class="form-check-label " for="inlineRadio1 ">1</label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input " type="radio " name="inlineRadioOptions " id="inlineRadio2 " value="option2 ">
+                            <label class="form-check-label " for="inlineRadio2 ">2</label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input " type="radio " name="inlineRadioOptions " id="inlineRadio3 " value="option3 " disabled>
+                            <label class="form-check-label " for="inlineRadio3 ">3 (disabled)</label>
+                        </div>
+                        <hr>
+                        <div class="form-check form-switch ">
+                            <input class="form-check-input " type="checkbox " role="switch " id="flexSwitchCheckDefault ">
+                            <label class="form-check-label " for="flexSwitchCheckDefault ">Default switch checkbox
+                                input</label>
+                        </div>
+                        <div class="form-check form-switch ">
+                            <input class="form-check-input " type="checkbox " role="switch " id="flexSwitchCheckChecked " checked>
+                            <label class="form-check-label " for="flexSwitchCheckChecked ">Checked switch checkbox
+                                input</label>
+                        </div>
+                        <div class="form-check form-switch ">
+                            <input class="form-check-input " type="checkbox " role="switch " id="flexSwitchCheckDisabled " disabled>
+                            <label class="form-check-label " for="flexSwitchCheckDisabled ">Disabled switch checkbox
+                                input</label>
+                        </div>
+                        <div class="form-check form-switch ">
+                            <input class="form-check-input " type="checkbox " role="switch " id="flexSwitchCheckCheckedDisabled " checked disabled>
+                            <label class="form-check-label " for="flexSwitchCheckCheckedDisabled ">Disabled checked
+                                switch checkbox input</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xl-6 ">
+                    <div class="bg-light rounded h-100 p-4 ">
+                        <h6 class="mb-4 ">Input Group</h6>
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text " id="basic-addon1 ">@</span>
+                            <input type="text " class="form-control " placeholder="Username " aria-label="Username " aria-describedby="basic-addon1 ">
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="text " class="form-control " placeholder="Recipient 's username" aria-label="Recipient's username " aria-describedby="basic-addon2 ">
+                            <span class="input-group-text " id="basic-addon2 ">@example.com</span>
+                        </div>
+                        <label for="basic-url " class="form-label ">Your vanity URL</label>
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text " id="basic-addon3 ">https://example.com/users/</span>
+                            <input type="text " class="form-control " id="basic-url " aria-describedby="basic-addon3 ">
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text ">$</span>
+                            <input type="text " class="form-control " aria-label="Amount (to the nearest dollar) ">
+                            <span class="input-group-text ">.00</span>
+                        </div>
+                        <div class="input-group mb-3 ">
+                            <input type="text " class="form-control " placeholder="Username " aria-label="Username ">
+                            <span class="input-group-text ">@</span>
+                            <input type="text " class="form-control " placeholder="Server " aria-label="Server ">
+                        </div>
+                        <div class="input-group ">
+                            <span class="input-group-text ">With textarea</span>
+                            <textarea class="form-control " aria-label="With textarea "></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xl-6 ">
+                    <div class="bg-light rounded h-100 p-4 ">
+                        <h6 class="mb-4 ">Sizing</h6>
+                        <input class="form-control form-control-lg mb-3 " type="text " placeholder=".form-control-lg " aria-label=".form-control-lg example ">
+                        <input class="form-control mb-3 " type="text " placeholder="Default input " aria-label="default input example ">
+                        <input class="form-control form-control-sm " type="text " placeholder=".form-control-sm " aria-label=".form-control-sm example ">
+                    </div>
+                </div> -->
+                </div>
+            </div>
+            <!-- Form End -->
+
+
+            <!-- Footer Start -->
+
+        </div>
+
+
+        </div>
+
+
+
+
+        {% endblock %}

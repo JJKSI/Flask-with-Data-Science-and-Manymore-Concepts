@@ -1,0 +1,13 @@
+{% extends "admin_layout.html" %} {% block content %}
+<div align="Center">
+    <h1>Pairplot</h1>
+    <img src="data:image/png;base64,{{ imgsns }} " width="800" height="800">
+    <br>
+    <h1>Facegridplot</h1>
+    <img src="data:image/png;base64,{{ imgsns1 }} " width="600" height="400">
+    <br>
+    <h1>swarmplot</h1>
+    <img src="data:image/png;base64,{{ imgsns2 }} " width="600" height="400">
+</div>
+
+{% endblock %}
